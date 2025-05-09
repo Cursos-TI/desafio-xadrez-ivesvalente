@@ -25,5 +25,23 @@ int main() {
         movimentoRainha++;
     } while (movimentoRainha < casasRainha); 
 
+     printf("\n"); // Linha em branco para separar o movimento do Cavalo
+
+    // Movimento do Cavalo (usando for aninhado com while)
+    printf("Movimento do Cavalo\n");
+    int movimentoVertical = 2;
+    int movimentoHorizontal = 1;
+
+    // Loop externo para o movimento vertical (duas casas para baixo)
+    for (int i = 0; i < movimentoVertical; i++) {
+        printf("Baixo\n");
+        // Loop interno para o movimento horizontal (uma casa para a esquerda)
+        int j = 0;
+        while (j < movimentoHorizontal && i == movimentoVertical - 1) {
+            printf("Esquerda\n");
+            j++;
+        }
+    }
+
     return 0; 
 }
